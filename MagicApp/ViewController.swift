@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     func getCards()  {
         Task {
-            let response = await APIManager.getCards()
+            let response = await CardsProvider().getCards()
             print(response)
         }
     }

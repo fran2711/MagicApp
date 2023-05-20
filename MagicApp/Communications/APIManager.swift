@@ -9,7 +9,7 @@ import Foundation
 
 class APIManager {
     
-    static func getCards() async -> (CardsResponse?, Error?) {
+    static func getCards() async -> (cardsResponse: CardsResponse?, error: Error?) {
         do {
             let data = try await ServerManager.shared.request(Constants.cardsURL)
             let result: CardsResponse = try JSONDecoder().decode(CardsResponse.self, from: data)

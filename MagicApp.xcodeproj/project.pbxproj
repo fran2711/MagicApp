@@ -16,7 +16,10 @@
 		A15189432A195E71001ED314 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15189422A195E71001ED314 /* Constants.swift */; };
 		A15189472A195F78001ED314 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15189462A195F78001ED314 /* ServerManager.swift */; };
 		A15189492A19684A001ED314 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15189482A19684A001ED314 /* APIManager.swift */; };
-		A151894D2A196930001ED314 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151894C2A196930001ED314 /* Cards.swift */; };
+		A151894D2A196930001ED314 /* CardsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151894C2A196930001ED314 /* CardsResponse.swift */; };
+		A15189502A19796C001ED314 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151894F2A19796C001ED314 /* Cards.swift */; };
+		A15189532A197C7A001ED314 /* CardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15189522A197C7A001ED314 /* CardsManager.swift */; };
+		A15189592A19840F001ED314 /* CardsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15189582A19840F001ED314 /* CardsProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +34,10 @@
 		A15189422A195E71001ED314 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A15189462A195F78001ED314 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		A15189482A19684A001ED314 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		A151894C2A196930001ED314 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		A151894C2A196930001ED314 /* CardsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsResponse.swift; sourceTree = "<group>"; };
+		A151894F2A19796C001ED314 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		A15189522A197C7A001ED314 /* CardsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsManager.swift; sourceTree = "<group>"; };
+		A15189582A19840F001ED314 /* CardsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsProvider.swift; sourceTree = "<group>"; };
 		BE29EDD3DBFCDFCAB947AC17 /* Pods_MagicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE5B833E95A2C8EC3F15F1E2 /* Pods-MagicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicApp.debug.xcconfig"; path = "Target Support Files/Pods-MagicApp/Pods-MagicApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,9 +84,11 @@
 		A151892D2A195D99001ED314 /* MagicApp */ = {
 			isa = PBXGroup;
 			children = (
+				A15189572A1983D7001ED314 /* Providers */,
+				A151894E2A197370001ED314 /* DomainEntities */,
+				A15189512A197C2F001ED314 /* Managers */,
 				A151892E2A195D99001ED314 /* AppDelegate.swift */,
 				A15189422A195E71001ED314 /* Constants.swift */,
-				A151894E2A197370001ED314 /* DomainEntities */,
 				A15189442A195F40001ED314 /* Communications */,
 				A15189322A195D99001ED314 /* ViewController.swift */,
 				A15189342A195D99001ED314 /* Main.storyboard */,
@@ -104,7 +112,7 @@
 		A151894A2A196907001ED314 /* ResponseEntities */ = {
 			isa = PBXGroup;
 			children = (
-				A151894C2A196930001ED314 /* Cards.swift */,
+				A151894C2A196930001ED314 /* CardsResponse.swift */,
 			);
 			path = ResponseEntities;
 			sourceTree = "<group>";
@@ -112,8 +120,25 @@
 		A151894E2A197370001ED314 /* DomainEntities */ = {
 			isa = PBXGroup;
 			children = (
+				A151894F2A19796C001ED314 /* Cards.swift */,
 			);
 			path = DomainEntities;
+			sourceTree = "<group>";
+		};
+		A15189512A197C2F001ED314 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A15189522A197C7A001ED314 /* CardsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A15189572A1983D7001ED314 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				A15189582A19840F001ED314 /* CardsProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 		ADB6D52717D2C3F9B61DC277 /* Frameworks */ = {
@@ -242,9 +267,12 @@
 				A15189472A195F78001ED314 /* ServerManager.swift in Sources */,
 				A15189492A19684A001ED314 /* APIManager.swift in Sources */,
 				A15189332A195D99001ED314 /* ViewController.swift in Sources */,
-				A151894D2A196930001ED314 /* Cards.swift in Sources */,
+				A15189502A19796C001ED314 /* Cards.swift in Sources */,
+				A151894D2A196930001ED314 /* CardsResponse.swift in Sources */,
+				A15189532A197C7A001ED314 /* CardsManager.swift in Sources */,
 				A151892F2A195D99001ED314 /* AppDelegate.swift in Sources */,
 				A15189432A195E71001ED314 /* Constants.swift in Sources */,
+				A15189592A19840F001ED314 /* CardsProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
