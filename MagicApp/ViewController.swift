@@ -11,7 +11,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        getCards()
+    }
+    
+    func getCards()  {
+        Task {
+            let response = await APIManager.getCards()
+            print(response)
+        }
     }
 
 
