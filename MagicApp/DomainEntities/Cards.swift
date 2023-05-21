@@ -20,27 +20,24 @@ struct Cards {
 
 
 struct Card {
-    var name: String?
-    var manaCost: String?
-    var type: String?
-    var colors: [String]?
-    var rarity: String?
-    var text: String?
-    var imageUrl: String?
+    var name: String
+    var manaCost: String
+    var type: String
+    var rarity: String
+    var text: String
+    var imageUrl: String
     
     init(cardResponse: CardResponse?) {
-        name = cardResponse?.name
-        manaCost = cardResponse?.manaCost
-        type = cardResponse?.type
-        colors = cardResponse?.colors
-        rarity = cardResponse?.rarity
-        text = cardResponse?.text
-        imageUrl = cardResponse?.imageUrl
+        name = cardResponse?.name ?? ""
+        manaCost = cardResponse?.manaCost ?? ""
+        type = cardResponse?.type ?? ""
+        rarity = cardResponse?.rarity ?? ""
+        text = cardResponse?.text ?? ""
+        imageUrl = cardResponse?.imageUrl ?? ""
     }
     
     func getImageURL() -> URL? {
-        guard let url = self.imageUrl else { return nil }
-        let imageURL = URL(string: url)
+        let imageURL = URL(string: imageUrl)
         return imageURL
     }
 }

@@ -18,7 +18,7 @@ class CardsListInteractor : CardsListInteractorProtocol {
             
             if let error = response.error {
                 DispatchQueue.main.async { [weak self] in
-                    self?.presenter?.showError(error: error)
+                    self?.presenter?.showError(error: error.localizedDescription)
                 }
             } else if let cards = response.cards {
                 DispatchQueue.main.async { [weak self] in

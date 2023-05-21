@@ -26,8 +26,8 @@ extension CardsListPresenter: CardsListPresenterProtocol {
         view?.showCards(cards: cards.cards)
     }
     
-    func showError(error: Error) {
-        print(error.localizedDescription)
+    func showError(error: String) {
+        print(error)
     }
     
     func cardSelected(card: Card) {

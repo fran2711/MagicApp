@@ -33,8 +33,8 @@ extension CardDetailViewController: CardDetailViewProtocol{
     func configureCardDetailView(card: Card) {
         cardImage.sd_setImage(with: card.getImageURL(), placeholderImage: UIImage(named: "noImageIcon"))
         cardNameLabel.text = card.name
-        cardManaCostLabel.text = card.manaCost
-        cardRarityLabel.text = card.rarity
+        cardManaCostLabel.text = "Mana cost: \(card.manaCost)"
+        cardRarityLabel.text = "Rarity: \(card.rarity)"
         cardTextLabel.text = card.text
     }
 }

@@ -34,7 +34,7 @@ protocol CardsListPresenterProtocol: BasePresenterProtocol {
     var router: CardsListRouterProtocol? { get set }
     
     func updateListWithCards(cards: Cards)
-    func showError(error: Error)
+    func showError(error: String)
     func cardSelected(card: Card)
 }
 

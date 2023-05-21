@@ -22,7 +22,7 @@ class CardDetailPresenter: BasePresenterProtocol {
     }
     
     func viewDidLoad() {
-        
+        view?.configureCardDetailView(card: card)
     }
 
 }
