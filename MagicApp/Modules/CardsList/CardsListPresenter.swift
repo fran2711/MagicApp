@@ -16,6 +16,11 @@ class CardsListPresenter: BasePresenterProtocol {
     var router: CardsListRouterProtocol?
     
     func viewDidLoad() {
+        getCardList()
+    }
+    
+    func getCardList() {
+        self.showLoading()
         interactor?.getCardList()
     }
 
@@ -23,11 +28,32 @@ class CardsListPresenter: BasePresenterProtocol {
 
 extension CardsListPresenter: CardsListPresenterProtocol {
     func updateListWithCards(cards: Cards) {
+        self.hideLoading()
         view?.showCards(cards: cards.cards)
     }
     
+    func showLoading() {
+        view?.showLoading({
+            self.getCardList()
+        })
+    }
+    
+    func hideLoading() {
+        view?.hideLoading()
+    }
+    
     func showError(error: String) {
-        print(error)
+        if let alert = view?.errorAlert(errorMessage: error, title: "Error") {
+            let done = UIAlertAction(title: Constants.done, style: .default)
+            let retry = UIAlertAction(title: Constants.retry, style: .default) { [weak self] _ in
+                self?.getCardList()
+            }
+            
+            alert.addAction(done)
+            alert.addAction(retry)
+            
+            view?.showAlert(alert)
+        }
     }
     
     func cardSelected(card: Card) {

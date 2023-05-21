@@ -47,5 +47,10 @@ extension CardsListViewController: CardsListViewProtocol{
     func showCards(cards: [Card]) {
         self.cards = cards
         cardsTableView.reloadData()
+        self.hideLoading()
+    }
+    
+    override func showLoading(_ completion : @escaping() -> ()) {
+        self.present(loadViewController(), animated: true, completion: completion)
     }
 }

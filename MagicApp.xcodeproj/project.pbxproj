@@ -48,6 +48,8 @@
 		A15189A22A1A04E7001ED314 /* CardDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151899F2A1A04E7001ED314 /* CardDetailRouter.swift */; };
 		A15189A32A1A04E7001ED314 /* CardDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151899C2A1A04E7001ED314 /* CardDetailInteractor.swift */; };
 		A15189A52A1A04ED001ED314 /* CardDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15189A42A1A04ED001ED314 /* CardDetailProtocols.swift */; };
+		A1CAEDE42A1A26BC001BF395 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CAEDE32A1A26BC001BF395 /* AlertManager.swift */; };
+		A1CAEDE62A1A3099001BF395 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CAEDE52A1A3099001BF395 /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		A151899E2A1A04E7001ED314 /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		A151899F2A1A04E7001ED314 /* CardDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailRouter.swift; sourceTree = "<group>"; };
 		A15189A42A1A04ED001ED314 /* CardDetailProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailProtocols.swift; sourceTree = "<group>"; };
+		A1CAEDE32A1A26BC001BF395 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		A1CAEDE52A1A3099001BF395 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		BE29EDD3DBFCDFCAB947AC17 /* Pods_MagicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE5B833E95A2C8EC3F15F1E2 /* Pods-MagicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicApp.debug.xcconfig"; path = "Target Support Files/Pods-MagicApp/Pods-MagicApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				A15189522A197C7A001ED314 /* CardsManager.swift */,
+				A1CAEDE32A1A26BC001BF395 /* AlertManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				A15189822A1988EF001ED314 /* PersonalData.storyboard */,
 				A15189942A19F451001ED314 /* CardsList.storyboard */,
 				A15189962A1A0361001ED314 /* CardDetail.storyboard */,
+				A1CAEDE52A1A3099001BF395 /* LoadingViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -462,6 +468,7 @@
 				A15189602A19863C001ED314 /* BaseRouterProtocol.swift in Sources */,
 				A15189492A19684A001ED314 /* APIManager.swift in Sources */,
 				A15189782A1986FE001ED314 /* SplashRouter.swift in Sources */,
+				A1CAEDE42A1A26BC001BF395 /* AlertManager.swift in Sources */,
 				A15189332A195D99001ED314 /* ViewController.swift in Sources */,
 				A151898F2A19F427001ED314 /* CardsListInteractor.swift in Sources */,
 				A15189502A19796C001ED314 /* Cards.swift in Sources */,
@@ -477,6 +484,7 @@
 				A151892F2A195D99001ED314 /* AppDelegate.swift in Sources */,
 				A15189A32A1A04E7001ED314 /* CardDetailInteractor.swift in Sources */,
 				A151898C2A19F427001ED314 /* CardsListRouter.swift in Sources */,
+				A1CAEDE62A1A3099001BF395 /* LoadingViewController.swift in Sources */,
 				A15189762A1986FE001ED314 /* SplashInteractor.swift in Sources */,
 				A15189772A1986FE001ED314 /* SplashViewController.swift in Sources */,
 				A151898E2A19F427001ED314 /* CardsListPresenter.swift in Sources */,

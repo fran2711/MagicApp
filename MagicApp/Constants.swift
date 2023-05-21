@@ -12,5 +12,7 @@ class Constants {
     static let mail: String = "franlucena27@gmail.com"
     static let name: String = "Francisco Lucena"
     static let currentDate: String = "21 de Mayo de 2023"
-    static let goToCards: String = "Ir a Cartas"
+    static let goToCards: String = "Go To Card List"
+    static let done: String = "Done"
+    static let retry: String = "Retry"
 }

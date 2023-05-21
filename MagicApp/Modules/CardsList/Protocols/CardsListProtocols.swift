@@ -33,9 +33,12 @@ protocol CardsListPresenterProtocol: BasePresenterProtocol {
     var interactor: CardsListInteractorProtocol? { get set }
     var router: CardsListRouterProtocol? { get set }
     
+    func getCardList()
     func updateListWithCards(cards: Cards)
     func showError(error: String)
     func cardSelected(card: Card)
+    func showLoading()
+    func hideLoading()
 }
 
 //----------------------------
