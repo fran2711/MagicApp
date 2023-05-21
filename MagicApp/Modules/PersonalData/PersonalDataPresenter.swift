@@ -18,14 +18,16 @@ class PersonalDataPresenter: BasePresenterProtocol {
     func viewDidLoad() {
         self.updatePersonalData()
     }
-    
-    func updatePersonalData() {
-        view?.updateData(name: Constants.name, email: Constants.mail, date: Constants.currentDate)
-    }
 
 }
 
 extension PersonalDataPresenter: PersonalDataPresenterProtocol {
+    func updatePersonalData() {
+        view?.updateData(name: Constants.name, email: Constants.mail, date: Constants.currentDate)
+    }
     
+    func goToCardsList() {
+        router?.showCards()
+    }
 }
 

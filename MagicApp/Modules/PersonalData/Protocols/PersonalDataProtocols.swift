@@ -30,11 +30,17 @@ protocol PersonalDataPresenterProtocol: BasePresenterProtocol {
     var view: PersonalDataViewProtocol? { get set }
     var interactor: PersonalDataInteractorProtocol? { get set }
     var router: PersonalDataRouterProtocol? { get set }
+    
+    func goToCardsList()
+    
 }
 
 //----------------------------
 // MARK: - Router
 //----------------------------
 protocol PersonalDataRouterProtocol : BaseRouterProtocol {
+    var view: PersonalDataViewController? { get set }
     static func launchModule() -> UIViewController?
+    
+    func showCards()
 }

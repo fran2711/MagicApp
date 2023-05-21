@@ -17,11 +17,12 @@ class PersonalDataRouter: BaseRouter, PersonalDataRouterProtocol {
     // MARK: - Launcher Initializer
     //----------------------------
     @discardableResult
+    
     static func launchModule() -> UIViewController? {
         if let view = StoryboardHandler.instantiateViewController(.personalDataView) as? PersonalDataViewController {
                     
             var interactor: PersonalDataInteractorProtocol = PersonalDataInteractor()
-            let router: PersonalDataRouterProtocol = PersonalDataRouter()
+            var router: PersonalDataRouterProtocol = PersonalDataRouter()
             var presenter: PersonalDataPresenterProtocol = PersonalDataPresenter()
 
             view.presenter = presenter
@@ -29,6 +30,7 @@ class PersonalDataRouter: BaseRouter, PersonalDataRouterProtocol {
             presenter.router = router
             presenter.interactor = interactor
             interactor.presenter = presenter
+            router.view = view
             
             router.startNavigation(navigationType: .asRootWithNav, view: view, from: nil)
                     
@@ -41,4 +43,8 @@ class PersonalDataRouter: BaseRouter, PersonalDataRouterProtocol {
     //----------------------------
     // MARK: - Navigation methods
     //----------------------------
+    
+    func showCards() {
+        push(from: view, to: CardsListRouter.launchModule())
+    }
 }

@@ -21,10 +21,12 @@ class PersonalDataViewController: BaseViewController {
         super.viewDidLoad()
                        
         presenter.viewDidLoad()
+        
+        navigationButton.setTitle(Constants.goToCards, for: .normal)
     }
     
     @IBAction func navigationButtonPressed(_ sender: UIButton) {
-        
+        presenter.goToCardsList()
     }
     
 }

@@ -36,6 +36,12 @@
 		A151897E2A198771001ED314 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151897D2A198771001ED314 /* BaseViewProtocol.swift */; };
 		A15189812A198878001ED314 /* StoryboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15189802A198878001ED314 /* StoryboardHandler.swift */; };
 		A15189832A1988EF001ED314 /* PersonalData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15189822A1988EF001ED314 /* PersonalData.storyboard */; };
+		A151898C2A19F427001ED314 /* CardsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151898B2A19F427001ED314 /* CardsListRouter.swift */; };
+		A151898D2A19F427001ED314 /* CardsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15189892A19F427001ED314 /* CardsListViewController.swift */; };
+		A151898E2A19F427001ED314 /* CardsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15189882A19F427001ED314 /* CardsListPresenter.swift */; };
+		A151898F2A19F427001ED314 /* CardsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151898A2A19F427001ED314 /* CardsListInteractor.swift */; };
+		A15189922A19F437001ED314 /* CardsListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15189912A19F436001ED314 /* CardsListProtocols.swift */; };
+		A15189952A19F451001ED314 /* CardsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15189942A19F451001ED314 /* CardsList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +76,12 @@
 		A151897D2A198771001ED314 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
 		A15189802A198878001ED314 /* StoryboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHandler.swift; sourceTree = "<group>"; };
 		A15189822A1988EF001ED314 /* PersonalData.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonalData.storyboard; sourceTree = "<group>"; };
+		A15189882A19F427001ED314 /* CardsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListPresenter.swift; sourceTree = "<group>"; };
+		A15189892A19F427001ED314 /* CardsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListViewController.swift; sourceTree = "<group>"; };
+		A151898A2A19F427001ED314 /* CardsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListInteractor.swift; sourceTree = "<group>"; };
+		A151898B2A19F427001ED314 /* CardsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListRouter.swift; sourceTree = "<group>"; };
+		A15189912A19F436001ED314 /* CardsListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsListProtocols.swift; sourceTree = "<group>"; };
+		A15189942A19F451001ED314 /* CardsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardsList.storyboard; sourceTree = "<group>"; };
 		BE29EDD3DBFCDFCAB947AC17 /* Pods_MagicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE5B833E95A2C8EC3F15F1E2 /* Pods-MagicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicApp.debug.xcconfig"; path = "Target Support Files/Pods-MagicApp/Pods-MagicApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +189,7 @@
 		A151895A2A1985E9001ED314 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A15189852A19F3DF001ED314 /* CardsList */,
 				A151896F2A1986D7001ED314 /* Splash */,
 				A15189632A19869D001ED314 /* PersonalData */,
 				A151895B2A1985FD001ED314 /* Common */,
@@ -249,6 +262,7 @@
 				A15189842A199058001ED314 /* Handler */,
 				A15189342A195D99001ED314 /* Splash.storyboard */,
 				A15189822A1988EF001ED314 /* PersonalData.storyboard */,
+				A15189942A19F451001ED314 /* CardsList.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -259,6 +273,26 @@
 				A15189802A198878001ED314 /* StoryboardHandler.swift */,
 			);
 			path = Handler;
+			sourceTree = "<group>";
+		};
+		A15189852A19F3DF001ED314 /* CardsList */ = {
+			isa = PBXGroup;
+			children = (
+				A15189902A19F42A001ED314 /* Protocols */,
+				A151898A2A19F427001ED314 /* CardsListInteractor.swift */,
+				A15189882A19F427001ED314 /* CardsListPresenter.swift */,
+				A151898B2A19F427001ED314 /* CardsListRouter.swift */,
+				A15189892A19F427001ED314 /* CardsListViewController.swift */,
+			);
+			path = CardsList;
+			sourceTree = "<group>";
+		};
+		A15189902A19F42A001ED314 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A15189912A19F436001ED314 /* CardsListProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		ADB6D52717D2C3F9B61DC277 /* Frameworks */ = {
@@ -332,6 +366,7 @@
 				A15189832A1988EF001ED314 /* PersonalData.storyboard in Resources */,
 				A151893B2A195D9A001ED314 /* LaunchScreen.storyboard in Resources */,
 				A15189382A195D9A001ED314 /* Assets.xcassets in Resources */,
+				A15189952A19F451001ED314 /* CardsList.storyboard in Resources */,
 				A15189362A195D99001ED314 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,17 +428,22 @@
 				A15189492A19684A001ED314 /* APIManager.swift in Sources */,
 				A15189782A1986FE001ED314 /* SplashRouter.swift in Sources */,
 				A15189332A195D99001ED314 /* ViewController.swift in Sources */,
+				A151898F2A19F427001ED314 /* CardsListInteractor.swift in Sources */,
 				A15189502A19796C001ED314 /* Cards.swift in Sources */,
 				A15189792A1986FE001ED314 /* SplashPresenter.swift in Sources */,
 				A151894D2A196930001ED314 /* CardsResponse.swift in Sources */,
 				A151895D2A19860C001ED314 /* BaseViewController.swift in Sources */,
+				A15189922A19F437001ED314 /* CardsListProtocols.swift in Sources */,
 				A151896A2A1986B8001ED314 /* PersonalDataInteractor.swift in Sources */,
 				A15189622A19866D001ED314 /* BasePresenterProtocol.swift in Sources */,
 				A15189532A197C7A001ED314 /* CardsManager.swift in Sources */,
 				A151892F2A195D99001ED314 /* AppDelegate.swift in Sources */,
+				A151898C2A19F427001ED314 /* CardsListRouter.swift in Sources */,
 				A15189762A1986FE001ED314 /* SplashInteractor.swift in Sources */,
 				A15189772A1986FE001ED314 /* SplashViewController.swift in Sources */,
+				A151898E2A19F427001ED314 /* CardsListPresenter.swift in Sources */,
 				A151896C2A1986B8001ED314 /* PersonalDataPresenter.swift in Sources */,
+				A151898D2A19F427001ED314 /* CardsListViewController.swift in Sources */,
 				A151897E2A198771001ED314 /* BaseViewProtocol.swift in Sources */,
 				A151897C2A19870C001ED314 /* SplashProtocols.swift in Sources */,
 				A15189432A195E71001ED314 /* Constants.swift in Sources */,

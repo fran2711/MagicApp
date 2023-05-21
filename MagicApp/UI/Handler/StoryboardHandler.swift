@@ -11,11 +11,13 @@ import UIKit
 enum StoryboardName: String {
     case splash = "Splash"
     case personalData = "PersonalData"
+    case cardList = "CardsList"
 }
 
 enum ViewControllerId: String {
     case splash = "SplashView"
     case personalDataView = "PersonalDataView"
+    case cardListView = "CardListView"
     
     var storyboard: StoryboardName {
         switch self {
@@ -23,6 +25,8 @@ enum ViewControllerId: String {
             return .splash
         case .personalDataView:
             return .personalData
+        case .cardListView:
+            return .cardList
         }
     }
 }
