@@ -17,7 +17,6 @@ class PersonalDataRouter: BaseRouter, PersonalDataRouterProtocol {
     // MARK: - Launcher Initializer
     //----------------------------
     @discardableResult
-    
     static func launchModule() -> UIViewController? {
         if let view = StoryboardHandler.instantiateViewController(.personalDataView) as? PersonalDataViewController {
                     

@@ -12,12 +12,14 @@ enum StoryboardName: String {
     case splash = "Splash"
     case personalData = "PersonalData"
     case cardList = "CardsList"
+    case cardDetail = "CardDetail"
 }
 
 enum ViewControllerId: String {
     case splash = "SplashView"
     case personalDataView = "PersonalDataView"
     case cardListView = "CardListView"
+    case cardDetailView = "CardDetailView"
     
     var storyboard: StoryboardName {
         switch self {
@@ -27,6 +29,8 @@ enum ViewControllerId: String {
             return .personalData
         case .cardListView:
             return .cardList
+        case .cardDetailView:
+            return .cardDetail
         }
     }
 }

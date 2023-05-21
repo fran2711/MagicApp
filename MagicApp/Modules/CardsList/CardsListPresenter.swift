@@ -14,10 +14,24 @@ class CardsListPresenter: BasePresenterProtocol {
     var view: CardsListViewProtocol?
     var interactor: CardsListInteractorProtocol?
     var router: CardsListRouterProtocol?
+    
+    func viewDidLoad() {
+        interactor?.getCardList()
+    }
 
 }
 
 extension CardsListPresenter: CardsListPresenterProtocol {
+    func updateListWithCards(cards: Cards) {
+        view?.showCards(cards: cards.cards)
+    }
     
+    func showError(error: Error) {
+        print(error.localizedDescription)
+    }
+    
+    func cardSelected(card: Card) {
+        router?.showCardDetail(card: card)
+    }
 }
 

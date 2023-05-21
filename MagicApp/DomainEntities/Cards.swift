@@ -26,6 +26,7 @@ struct Card {
     var colors: [String]?
     var rarity: String?
     var text: String?
+    var imageUrl: String?
     
     init(cardResponse: CardResponse?) {
         name = cardResponse?.name
@@ -34,5 +35,12 @@ struct Card {
         colors = cardResponse?.colors
         rarity = cardResponse?.rarity
         text = cardResponse?.text
+        imageUrl = cardResponse?.imageUrl
+    }
+    
+    func getImageURL() -> URL? {
+        guard let url = self.imageUrl else { return nil }
+        let imageURL = URL(string: url)
+        return imageURL
     }
 }

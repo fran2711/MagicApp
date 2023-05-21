@@ -7,5 +7,6 @@ target 'MagicApp' do
 
   # Pods for MagicApp
   pod 'Alamofire'
+  pod 'SDWebImage'
 
 end

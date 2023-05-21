@@ -21,7 +21,7 @@ class CardsListRouter: BaseRouter, CardsListRouterProtocol {
         if let view = StoryboardHandler.instantiateViewController(.cardListView) as? CardsListViewController {
                     
             var interactor: CardsListInteractorProtocol = CardsListInteractor()
-            let router: CardsListRouterProtocol = CardsListRouter()
+            var router: CardsListRouterProtocol = CardsListRouter()
             var presenter: CardsListPresenterProtocol = CardsListPresenter()
 
             view.presenter = presenter
@@ -29,6 +29,7 @@ class CardsListRouter: BaseRouter, CardsListRouterProtocol {
             presenter.router = router
             presenter.interactor = interactor
             interactor.presenter = presenter
+            router.view = view
                     
             return view
         }
@@ -39,5 +40,9 @@ class CardsListRouter: BaseRouter, CardsListRouterProtocol {
     //----------------------------
     // MARK: - Navigation methods
     //----------------------------
+    
+    func showCardDetail(card: Card) {
+        
+    }
 
 }

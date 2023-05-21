@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CardDetailView" id="Y6W-OH-hqX" customClass="CardDetailViewController" customModule="MagicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ahD-MJ-4rK">
+                                <rect key="frame" x="70" y="109" width="253" height="253"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ahD-MJ-4rK" secondAttribute="height" multiplier="1:1" id="jA0-s2-fIH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIn-jU-VjK">
+                                <rect key="frame" x="20" y="416" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGi-yR-YbR">
+                                <rect key="frame" x="20" y="462" width="176.66666666666666" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh9-Vz-LWH">
+                                <rect key="frame" x="196.66666666666663" y="462" width="176.33333333333337" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLO-to-ppR">
+                                <rect key="frame" x="20" y="508" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yIn-jU-VjK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="4VB-cp-0mG"/>
+                            <constraint firstItem="ahD-MJ-4rK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="4i4-E2-COh"/>
+                            <constraint firstItem="BLO-to-ppR" firstAttribute="trailing" secondItem="yIn-jU-VjK" secondAttribute="trailing" id="6Yb-Pb-c3z"/>
+                            <constraint firstItem="nGi-yR-YbR" firstAttribute="leading" secondItem="yIn-jU-VjK" secondAttribute="leading" id="Adf-gj-jdz"/>
+                            <constraint firstItem="yIn-jU-VjK" firstAttribute="top" secondItem="ahD-MJ-4rK" secondAttribute="bottom" constant="54" id="Aku-OC-zTE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ahD-MJ-4rK" secondAttribute="trailing" constant="70" id="F8O-I4-Vv8"/>
+                            <constraint firstItem="gh9-Vz-LWH" firstAttribute="leading" secondItem="yIn-jU-VjK" secondAttribute="centerX" id="OIU-ni-KO9"/>
+                            <constraint firstItem="ahD-MJ-4rK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="Oco-h6-Ne1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BLO-to-ppR" secondAttribute="bottom" constant="20" id="VjB-zy-LSI"/>
+                            <constraint firstItem="BLO-to-ppR" firstAttribute="leading" secondItem="yIn-jU-VjK" secondAttribute="leading" id="bQj-Pj-jeV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yIn-jU-VjK" secondAttribute="trailing" constant="20" id="cC0-0d-jDb"/>
+                            <constraint firstItem="nGi-yR-YbR" firstAttribute="top" secondItem="yIn-jU-VjK" secondAttribute="bottom" constant="25" id="kOr-TW-2ON"/>
+                            <constraint firstItem="gh9-Vz-LWH" firstAttribute="trailing" secondItem="yIn-jU-VjK" secondAttribute="trailing" id="lFO-ub-1Le"/>
+                            <constraint firstItem="BLO-to-ppR" firstAttribute="top" secondItem="nGi-yR-YbR" secondAttribute="bottom" constant="25" id="rWQ-YM-iu5"/>
+                            <constraint firstItem="gh9-Vz-LWH" firstAttribute="top" secondItem="yIn-jU-VjK" secondAttribute="bottom" constant="25" id="s57-Tv-Sj8"/>
+                            <constraint firstItem="yIn-jU-VjK" firstAttribute="centerX" secondItem="nGi-yR-YbR" secondAttribute="trailing" id="zM2-Sb-G50"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImage" destination="ahD-MJ-4rK" id="kFg-Qp-QjH"/>
+                        <outlet property="cardManaCostLabel" destination="nGi-yR-YbR" id="qyp-qV-dg9"/>
+                        <outlet property="cardNameLabel" destination="yIn-jU-VjK" id="ic4-hi-ErB"/>
+                        <outlet property="cardRarityLabel" destination="gh9-Vz-LWH" id="pg2-gL-ePR"/>
+                        <outlet property="cardTextLabel" destination="BLO-to-ppR" id="qUi-N8-l6y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

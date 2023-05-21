@@ -20,6 +20,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NYF-dU-NvT">
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="aiX-ne-Kza"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="H55-rF-JLC"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -31,6 +35,9 @@
                             <constraint firstItem="NYF-dU-NvT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="l1D-Ui-KDy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cardsTableView" destination="NYF-dU-NvT" id="AA6-mh-Q9h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
